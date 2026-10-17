@@ -12,6 +12,9 @@ import {Elapsed} from "@/common/traits/Elapsed.ts";
 import {applyPlayerColor} from "@/common/systems/applyPlayerColor.ts";
 import useRapier from "@/common/hooks/physics/useRapier.ts";
 import {syncControllerAndVisualPosition} from "@/common/systems/syncControllerAndVisualPosition.ts";
+import {updatePlayerAnimationClip} from "@/common/systems/updatePlayerAnimationClip.ts";
+import {advanceSpriteAnimation} from "@/common/systems/advanceSpriteAnimation.ts";
+import {applySpriteAnimationFrame} from "@/common/systems/applySpriteAnimationFrame.ts";
 
 export default function FrameLoop() {
 
@@ -49,6 +52,10 @@ export default function FrameLoop() {
         addJumpBuffer(world);
         doJump(world);
         freeJumpBuffer(world);
+
+        updatePlayerAnimationClip(world, delta);
+        advanceSpriteAnimation(world, delta);
+        applySpriteAnimationFrame(world);
     })
 
     return <></>

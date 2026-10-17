@@ -38,7 +38,9 @@ export default function Game() {
         </mesh>
         <ambientLight color={"white"} intensity={Math.PI / 3}/>
         <CameraRenderer/>
-        <PlayerRenderer/>
+        <Suspense>
+            <PlayerRenderer/>
+        </Suspense>
         <Suspense>
             <LdtkMap
                 ldtkPath={"/assets/ldtk/test.ldtk"}
