@@ -9,7 +9,7 @@ A 2D platformer game built with React Three Fiber (R3F) and integrated with LDTK
 - ~~(LDTK) Add IntGrid Layer Renderer~~
 - (LDTK) Add AutoLayer Renderer
 - Multiple Levels & Transitions
-- Animation System
+- ~~Animation System~~
 - Audio System
 - Dialogue System
 - ~~Lighting & Shadows~~
